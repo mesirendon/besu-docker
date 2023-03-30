@@ -1,0 +1,61 @@
+version: "3.7"
+services:
+  besu-node-1:
+    container_name: besu-node-1
+    image: hyperledger/besu:latest
+    volumes:
+      - ./node-1:/usr/app/
+    command: --config-file=/usr/app/config.toml
+    ports:
+      - 8515:8545
+      - 8516:8546
+      - 8517:8547
+    networks:
+      default:
+        ipv4_address: 172.24.2.11
+  besu-node-2:
+    container_name: besu-node-2
+    image: hyperledger/besu:latest
+    volumes:
+      - ./node-2:/usr/app/
+    command: --config-file=/usr/app/config.toml
+    ports:
+      - 8525:8545
+      - 8526:8546
+      - 8527:8547
+    networks:
+      default:
+        ipv4_address: 172.24.2.12
+  besu-node-3:
+    container_name: besu-node-3
+    image: hyperledger/besu:latest
+    volumes:
+      - ./node-3:/usr/app/
+    command: --config-file=/usr/app/config.toml
+    ports:
+      - 8535:8545
+      - 8536:8546
+      - 8537:8547
+    networks:
+      default:
+        ipv4_address: 172.24.2.13
+  besu-node-4:
+    container_name: besu-node-4
+    image: hyperledger/besu:latest
+    volumes:
+      - ./node-4:/usr/app/
+    command: --config-file=/usr/app/config.toml
+    ports:
+      - 8545:8545
+      - 8546:8546
+      - 8547:8547
+    networks:
+      default:
+        ipv4_address: 172.24.2.14
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.24.2.0/27

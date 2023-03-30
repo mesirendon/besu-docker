@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  reltime_node:
+    image: hyperledger/besu:latest
+    container_name: "node-4"
+    volumes:
+      - .:/usr/app/
+    command: --config-file=/usr/app/config.toml
+    ports:
+      - 8548:8548
+      - 30306:30306
+volumes:
+  .:

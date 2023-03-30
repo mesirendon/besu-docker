@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  node:
+    image: hyperledger/besu:latest
+    container_name: "node-1"
+    volumes:
+      - .:/usr/app/
+    command: --config-file=/usr/app/config.toml
+    ports:
+      - 8545:8545
+      - 8888:8888
+      - 30303:30303
+    networks:
+      default:
+        ipv4_address: 172.22.0.5
+volumes:
+  .:
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.22.0.0/27

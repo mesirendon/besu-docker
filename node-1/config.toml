@@ -1,0 +1,19 @@
+# Valid TOML config file
+data-path="/usr/app/data" # Path
+
+rpc-http-enabled=true
+rpc-http-api=["ETH","NET","WEB3","IBFT"]
+rpc-http-cors-origins=["*"]
+rpc-http-host="0.0.0.0"
+rpc-http-port=8545
+
+host-allowlist=["*"]
+
+rpc-ws-enabled=true
+
+p2p-host="172.24.2.11"
+
+genesis-file="/usr/app/genesis.json" # Path to the custom genesis file
+metrics-enabled=true
+
+min-gas-price=0

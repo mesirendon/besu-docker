@@ -2,7 +2,7 @@
 data-path="/usr/app/data" # Path
 
 rpc-http-enabled=true
-rpc-http-api=["ETH","NET","WEB3","IBFT"]
+rpc-http-api=["ADMIN","DEBUG","MINER","PRIV","ETH","NET","WEB3","IBFT"]
 rpc-http-cors-origins=["*"]
 rpc-http-host="0.0.0.0"
 rpc-http-port=8545

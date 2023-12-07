@@ -2,10 +2,10 @@
 data-path="/usr/app/data" # Path
 
 # Network
-bootnodes=["enode://{replaceWithEnodeString}@172.24.2.11:30303"]
+bootnodes=["enode://ea1c341e06bd07f1bf3ba94f5b92518f66b574604768efab30dd9d970a75aeb94889a8cc0a57723deddcbef010d9987eb9df5fb4b21c9b42c548bb857586d28f@172.24.2.11:30303"]
 
 rpc-http-enabled=true
-rpc-http-api=["ETH","NET","IBFT"]
+rpc-http-api=["ETH","NET","WEB3","IBFT"]
 
 host-allowlist=["*"]
 
